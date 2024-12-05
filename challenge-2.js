@@ -1,27 +1,22 @@
-const marks = [100, 70, 40];
+var mark;
+    var grade;
+    grade = "Not Yet Graded";
+    
+    
+    mark = prompt("100(%)");
+        
+    if (mark >= 0 && mark <= 100) {
+        if (mark >= 70 && mark <= 100) {
+            grade = "A";
+        } else if (mark>= 60 && mark <=50) {
+            grade = "C";
+               } else if (mark >= 0 && mark <= 40) {
+            grade = "F";
+        } else {
+            grade = "UNKNOWN";
+        }
+    
+    
+        alert("Mark: " + mark + "% - Grade: " + grade);
+    } 
 
-
-function calculateGrade(marks) {
-
-  let summ = 0;
-
-  for (let i = 0; i < marks.length; i++) {
-    summ += marks[i];
-  }
-  const avg = summ / marks.length;
-  let grade = '100';
-  if (avg < 59) {
-    grade = 'F';
-  } else if (avg <= 69) {
-    grade = 'D';
-  } else if (avg <= 79) {
-    grade = 'C';
-  } else if (avg <= 89) {
-    grade = 'B';
-  } else {
-    grade = 'A';
-  }
-  return grade;
-}
-
-console.log(calculateGrade(marks));
